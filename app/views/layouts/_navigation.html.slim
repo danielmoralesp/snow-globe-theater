@@ -1,13 +1,13 @@
-/ navigation styled for Bootstrap 3.0
-nav.navbar.navbar-inverse.navbar-fixed-top
+nav.navbar.navbar-default.navbar-static-top
   .container
     .navbar-header
-      button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-collapse"]
+      button.navbar-toggle(
+        data-target=".navbar-collapse" data-toggle="collapse")
         span.sr-only Toggle navigation
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      = link_to 'Home', root_path, class: 'navbar-brand'
+    = link_to("Snow Globe Theater", root_path, class: "navbar-brand")
     .collapse.navbar-collapse
       ul.nav.navbar-nav
-        == render 'layouts/navigation_links'
+        = render "layouts/navigation_links"

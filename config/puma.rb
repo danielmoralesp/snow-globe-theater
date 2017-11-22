@@ -1,3 +1,11 @@
+#---
+# Excerpted from "Take My Money",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/nrwebpay for more book information.
+#---
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers a minimum and maximum.
 # Any libraries that use thread pools should be configured to match
@@ -7,7 +15,8 @@
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }.to_i
 threads threads_count, threads_count
 
-# Specifies the `port` that Puma will listen on to receive requests, default is 3000.
+# Specifies the `port` that Puma will listen on to receive requests,
+# default is 3000.
 #
 port        ENV.fetch("PORT") { 3000 }
 
