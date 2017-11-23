@@ -8,8 +8,6 @@
 #---
 class ShoppingCartsController < ApplicationController
 
-  before_action :authenticate_user!
-
   #
   def show
     @cart = ShoppingCart.new(current_user)
