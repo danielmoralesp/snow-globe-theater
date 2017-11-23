@@ -43,7 +43,7 @@ class ShoppingCart
   end
 
   def total_cost
-    tickets.map(&:price).sum
+    tickets.map(&:price).sum.to_money
   end
 
 end

@@ -1,4 +1,12 @@
-class Payment < ApplicationRecord
+#---
+# Excerpted from "Take My Money",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/nrwebpay for more book information.
+#---
+class Payment < ActiveRecord::Base
 
   include HasReference
 
@@ -18,8 +26,8 @@ class Payment < ApplicationRecord
   def create_line_items(tickets)
     tickets.each do |ticket|
       payment_line_items.create!(
-        buyable: ticket, price_cents: ticket.price.cents
-      )
+          buyable: ticket, price_cents: ticket.price.cents)
     end
   end
+
 end

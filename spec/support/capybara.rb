@@ -6,5 +6,7 @@
 # We make no guarantees that this code is fit for any purpose.
 # Visit http://www.pragmaticprogrammer.com/titles/nrwebpay for more book information.
 #---
+require "capybara/poltergeist"
 require "capybara-screenshot/rspec"
 Capybara.asset_host = "http://localhost:3000"
+Capybara.javascript_driver = :poltergeist

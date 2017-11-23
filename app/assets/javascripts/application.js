@@ -22,4 +22,5 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require purchases_cart
 //= require_tree .

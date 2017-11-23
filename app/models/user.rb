@@ -14,7 +14,6 @@ class User < ApplicationRecord
   enum role: {user: 0, vip: 1, admin: 2}
 
   has_many :tickets
-  has_many :payments
 
   #
   def tickets_in_cart

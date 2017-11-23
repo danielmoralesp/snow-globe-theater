@@ -6,19 +6,16 @@
 # We make no guarantees that this code is fit for any purpose.
 # Visit http://www.pragmaticprogrammer.com/titles/nrwebpay for more book information.
 #---
-module HasReference
+class CreatePaymentLineItems < ActiveRecord::Migration[5.0]
 
-  extend ActiveSupport::Concern
+  def change
+    create_table :payment_line_items do |t|
+      t.references :payment, foreign_key: true
+      t.references :buyable, polymorphic: true
+      t.monetize :price
 
-  module ClassMethods
-
-    def generate_reference
-      loop do
-        result = SecureRandom.hex(10)
-        return result unless exists?(reference: result)
-      end
+      t.timestamps
     end
-
   end
 
 end
